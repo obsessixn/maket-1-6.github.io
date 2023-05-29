@@ -1,0 +1,56 @@
+.footer {
+  border-top:1px solid $border;
+  &__container {
+    color: $text;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+    padding-top:16px;
+    padding-bottom:19px;
+  }
+  &__copyright {
+    min-width:218px;
+    text-align: center;
+    vertical-align: top;
+  }
+  &__politic {
+    min-width:218px;
+    text-align: center;
+  }
+  &__oferta {
+    min-width:312px;
+    text-align: center;
+  }
+}
+@media (min-width:$laptop){
+  .footer {
+    border-top:1px solid $border;
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 24px;
+      padding-right: 24px;
+      font-size: 14px;
+    }
+    &__copyright {
+      max-width:218px;
+      text-align: left;
+    }
+    &__politic {
+      min-width:214px;
+    }
+    &__oferta {
+      min-width:213px;
+      max-width: 230px;
+      text-align: right;
+    }
+  }
+}
+@media (min-width:$desktop){
+  .footer {
+    &__oferta {
+      max-width: 330px;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.brands{
+  display: flex;
+  flex-direction: column;
+  max-height: 230px;
+  &__header {
+    padding-top:16px;
+    padding-bottom:16px;
+    padding-left:30px;
+    width: calc(100% + 46px); 
+    margin-left: -30px;
+    margin-bottom: 24px;
+    background-color: white;
+    border-top: 1px solid $border;
+    background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+  }
+  &__main{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width:100%;
+    position: relative;
+  }
+  &__swiper-slide{
+    height: 72px;
+    max-width: 240px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__slide-container{
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  &__swiper-wrapper{
+    height: 130px;
+  }
+  &__swiper::after{ 
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 50;
+    right: -2px;
+    pointer-events: none;
+    background-image: linear-gradient(to right, rgba(248,248,248,0), rgba(248,248,248, 1) 100%);
+    width: 10%;
+    height: 5em;
+  }
+  &__main{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width:100%;
+    position: relative;
+  }
+  &__read-more {
+    display: none;
+    align-self: start;
+    margin-left: 15px;
+    &:hover{
+      color:$text;
+    }
+    }
+  &__bullets{
+      bottom: 15px !important;
+    }
+}
+@media (min-width: $laptop){
+  .brands{
+    max-height: 512px;
+    &__header {
+      width: calc(100% + 54px); 
+    }
+    &__read-more {
+      z-index: 3;
+      display: block;
+    }
+    &__swiper{
+      width: 100%;
+      min-height:160px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    &__swiper::after{
+      display: none;
+    }
+    &__swiper-wrapper{
+      flex-wrap: wrap;
+      row-gap:16px;
+      column-gap: 16px;
+      transition: height 0.8s;
+    }
+    &__swiper-slide{
+      max-width:224px;
+      margin-right: 0px;
+    }
+    &__main{
+      height:100%  
+    }
+    &__item--empty{
+      width:224px;
+    } 
+  }
+}
+@media (min-width: $desktop){
+  .brands{
+    &__header {
+      width: calc(100% + 60px); 
+    }
+  }
+}
+

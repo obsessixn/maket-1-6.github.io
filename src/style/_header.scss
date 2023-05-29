@@ -1,0 +1,101 @@
+.header{
+  padding-left:16px;
+  padding-right:16px;
+  width: 100%;
+  background-size: cover;
+  margin-bottom: 24px;
+  border-bottom: 1px solid $border;
+  margin:0;
+  z-index: 2;
+  max-height: 88px;
+}
+.header__container {
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__menu {
+  margin-right:16.73px;
+}
+.header__logo {
+  background-repeat: no-repeat;
+  width: 96.55px;
+  height: 50.81px;
+  margin-right:auto;
+}
+.header__title {
+  display: none;
+}
+.header__call {
+  display: none;
+}
+.header__chat {
+  display: none;
+}
+.header__profile {
+  display: none;
+}
+.header__repair {
+  margin-right:16px;
+}
+.header__repair::before{
+  content: url("./images/divider.svg") ;
+  position: absolute;
+  transform: translate(-40px,0px);
+}
+
+@media(min-width:$laptop){
+  .header__container{
+    padding-left:8px;
+    padding-right:8px;
+  }
+  .header__menu{
+    margin-right: 42.73px;
+  }
+  .header__menu::after{
+    content: url("./images/divider.svg");
+    position: absolute;
+    transform: translate(40px,0px);
+
+  }
+  .header__call {
+    margin-right:16px;
+    display: flex;
+  }
+  .header__chat {
+    margin-right:16px;
+    display: flex;
+  }
+  .header__profile {
+    margin-right:42px;
+    display: flex;
+  }
+  @media(min-width:$desktop){
+    .header__container{
+      padding-left:30px;
+      padding-right:30px;
+    }
+    .header__menu{
+      display:none;
+    }
+    .header__logo{
+      display:none;
+    }
+    .header__call{
+      display:none;
+    }
+    .header__chat{
+      display:none;
+    }
+    .header__profile{
+      display:none;
+    }
+    .header__repair::before{
+      display: none;
+    }
+    .header{
+      display: none;
+    }
+  }
+}
