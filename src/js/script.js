@@ -100,9 +100,9 @@ function showMore(button) {
     brandsMain.style.height = `${brandsMain.scrollHeight}px`
     button.textContent = 'Скрыть'
     button.classList.toggle('read-more--arrow-up')
-  } else if (button.textContent === 'Показать все ') {
+  } else if (button.textContent === 'Показать все') {
     techMain.style.height = `${techMain.scrollHeight}px`
-    button.textContent = 'Скрыть '
+    button.textContent = 'Скрыть'
     button.classList.toggle('read-more--arrow-up')
   } else if (button.textContent === 'Читать далее') {
     pageText.style.height = `${pageText.scrollHeight}px`

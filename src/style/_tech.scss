@@ -1,116 +1,119 @@
-.tech{
+.tech {
   display: flex;
   flex-direction: column;
   max-height: 512px;
   &__header {
-    padding-top:16px;
-    padding-bottom:16px;
-    padding-left:30px;
-    width: calc(100% + 46px); 
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 30px;
+    width: calc(100% + 46px);
     margin-left: -30px;
     margin-bottom: 24px;
     background-color: white;
     border-top: 1px solid $border;
-    background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+    background: linear-gradient(90deg, #f8f8f8 1.39%, #ffffff 100%);
   }
-  &__main{
+  &__main {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    width:100%;
+    width: 100%;
     position: relative;
     height: 220px;
   }
-  &__swiper-slide{
+  &__swiper-slide {
     height: 160px;
     max-width: 240px;
     align-items: center;
   }
-  &__slide-container{
+  &__slide-container {
     justify-content: space-between;
-    padding-top:16px;
-    padding-left:16px;
-    padding-bottom:16px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
     height: 100%;
     width: 100%;
   }
-  &__swiper::after{ 
-    content: "";
+  &__swiper::after {
+    content: '';
     position: absolute;
     z-index: 1;
     top: 50;
     right: -2px;
     pointer-events: none;
-    background-image: linear-gradient(to right, rgba(248,248,248,0), rgba(248,248,248, 1) 100%);
+    background-image: linear-gradient(
+      to right,
+      rgba(248, 248, 248, 0),
+      rgba(248, 248, 248, 1) 100%
+    );
     width: 10%;
     height: 10em;
   }
-  &__swiper-wrapper{
-    height:160px
+  &__swiper-wrapper {
+    height: 160px;
   }
   &__read-more {
     display: none;
     align-self: start;
     margin-left: 15px;
-    &:hover{
-      color:$text;
+    &:hover {
+      color: $text;
     }
-    }
-  &__bullets{
-      bottom: 15px !important;
-    }
-  &__text{
+  }
+  &__bullets {
+    bottom: 15px !important;
+  }
+  &__text {
     font-weight: 500;
     font-size: 16px;
-    align-self:flex-start;
+    align-self: flex-start;
   }
-  &__go-button{
-    align-self:flex-end;
+  &__go-button {
+    align-self: flex-end;
   }
 }
 
-@media (min-width: $laptop){
-  .tech{
+@media (min-width: $laptop) {
+  .tech {
     max-height: 100%;
     &__header {
-      width: calc(100% + 54px); 
+      width: calc(100% + 54px);
     }
     &__read-more {
       z-index: 3;
       display: block;
     }
-    &__swiper{
+    &__swiper {
       width: 100%;
-      min-height:160px;
+      min-height: 160px;
       overflow: hidden;
       margin-bottom: 16px;
     }
-    &__swiper::after{
+    &__swiper::after {
       display: none;
     }
-    &__swiper-wrapper{
+    &__swiper-wrapper {
       flex-wrap: wrap;
-      row-gap:16px;
+      row-gap: 16px;
       column-gap: 16px;
       transition: height 0.8s;
     }
-    &__swiper-slide{
-      max-width:224px;
+    &__swiper-slide {
+      max-width: 224px;
       margin-right: 0px;
     }
-    &__main{
-      height:100%  
+    &__main {
+      height: 100%;
     }
-    &__item--empty{
-      width:224px;
-    } 
-  }
-  @media (min-width: $desktop){
-    .tech{
-      &__header {
-        width: calc(100% + 60px); 
-      }
+    &__item--empty {
+      width: 224px;
     }
   }
 }
-
+@media (min-width: $desktop) {
+  .tech {
+    &__header {
+      width: calc(100% + 60px);
+    }
+  }
+}

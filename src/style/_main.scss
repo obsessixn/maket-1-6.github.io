@@ -1,22 +1,22 @@
 @import './var';
- 
-.page{
+
+.page {
   background-color: $back;
-  &__container{
-    display:flex;
+  &__container {
+    display: flex;
     flex-direction: column;
     gap: 24px;
   }
-  &__service{
+  &__service {
     display: flex;
     flex-direction: column;
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
   }
   &__about {
     display: flex;
     flex-direction: column;
   }
-  &__description{
+  &__description {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -25,8 +25,8 @@
   &__text {
     height: 90px;
     overflow: hidden;
-    white-space:pre-wrap;
-    width:100%;
+    white-space: wrap;
+    width: 100%;
     display: block;
     font-size: 14px;
     line-height: 18px;
@@ -37,11 +37,11 @@
   &__read-more {
     margin-top: 16px;
     margin-left: 16px;
-    &:hover{
-      color:$text;
+    &:hover {
+      color: $text;
     }
   }
-  &__image{
+  &__image {
     padding-top: 32px;
     padding-bottom: 32px;
     width: 100%;
@@ -51,96 +51,100 @@
 .read-more {
   font-weight: 500;
   color: black;
-  &::before{
-    content: url("./images/icon.svg");
+  &::before {
+    content: url('./images/icon.svg');
     margin-right: 15px;
   }
-  &--arrow-up{
-    ::before{
+  &--arrow-up {
+    ::before {
       display: inline-block;
       transform: rotate(180deg);
     }
   }
-  &--arrow-up::before{
+  &--arrow-up::before {
     display: inline-block;
     transform: rotate(180deg);
   }
 }
-.service{
-  &__title{
-    margin-top:25px;
+.service {
+  &__title {
+    margin-top: 25px;
     margin-bottom: 10px;
-    &::before{
-      content:url("./images/highlight.png");
+    &::before {
+      content: url('./images/highlight.png');
       position: absolute;
       left: 0px;
-      top:115px;
-    } 
+      top: 115px;
+    }
   }
-  &__list{
+  &__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow: scroll;
-    max-width:100vw;
+    max-width: 100vw;
     white-space: nowrap;
     column-gap: 14px;
     height: 62px;
     padding-top: 2px;
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       z-index: 1;
       top: 50;
       right: 0;
       pointer-events: none;
-      background-image: linear-gradient(to right, rgba(248,248,248,0), rgba(248,248,248, 1) 90%);
+      background-image: linear-gradient(
+        to right,
+        rgba(248, 248, 248, 0),
+        rgba(248, 248, 248, 1) 90%
+      );
       width: 10%;
       height: 4em;
     }
-    &::-webkit-scrollbar{
-    width: 0;
+    &::-webkit-scrollbar {
+      width: 0;
     }
   }
-  &__item{
+  &__item {
     color: $text;
     box-sizing: border-box;
     height: 40px;
     white-space: nowrap;
     padding: 8px;
     box-sizing: border-box;
-    &:hover{
+    &:hover {
       outline: 2px solid $border;
       border-radius: 6px;
       box-sizing: border-box;
     }
-    &:first-child{
+    &:first-child {
       margin-left: 2px;
     }
-    &:last-child{
+    &:last-child {
       margin-right: 2px;
     }
   }
-  &__item-link{
+  &__item-link {
     text-decoration: none;
     display: block;
-    color:inherit;
+    color: inherit;
     margin: 0;
   }
 }
-.repair{
+.repair {
   &__repair-text {
     display: none;
   }
 }
-.check{
+.check {
   &__check-text {
     display: none;
   }
 }
-.button{
-  background-color:$button;
-  border-radius:50%;
+.button {
+  background-color: $button;
+  border-radius: 50%;
   width: 40px;
   height: 40px;
   display: flex;
@@ -151,26 +155,26 @@
   display: none;
 }
 .service__check {
-  display:none;
+  display: none;
 }
-.main-container{
+.main-container {
   height: 100%;
 }
-@media(min-width:$laptop){
-  .page{
-    &__about{
+@media (min-width: $laptop) {
+  .page {
+    &__about {
       flex-direction: row;
       justify-content: space-between;
     }
-    &__text{
+    &__text {
       min-height: 160px;
     }
-    &__image{
+    &__image {
       max-width: 50%;
       padding-top: 0;
       border-radius: 10px;
     }
-    &__description{
+    &__description {
       justify-content: flex-start;
       min-width: 312px;
       max-width: 50%;
@@ -178,36 +182,36 @@
     }
   }
 }
-@media(min-width:$desktop){
-  .page{
-    &__container{
-      margin-top:20px
+@media (min-width: $desktop) {
+  .page {
+    &__container {
+      margin-top: 20px;
     }
-    &__service{
-      gap:10px;
+    &__service {
+      gap: 10px;
       flex-direction: row;
       flex-wrap: wrap;
     }
   }
-  .service{
-    &__title{
+  .service {
+    &__title {
       margin-right: auto;
       justify-self: start;
-      margin-top:0;
-      gap:10px;
+      margin-top: 0;
+      gap: 10px;
       row-gap: 24px;
       flex-direction: row;
       flex-wrap: wrap;
       align-items: center;
-      width:58%;
+      width: 58%;
     }
-    &__list{
+    &__list {
       flex-wrap: wrap;
       height: 105px;
-      column-gap: 10px ;
+      column-gap: 10px;
     }
-    &__repair-container{
-      display:flex;
+    &__repair-container {
+      display: flex;
       flex-direction: row;
       width: 190px;
       justify-content: space-between;
@@ -222,11 +226,11 @@
         white-space: nowrap;
       }
     }
-    &__repair{
-      display:flex;
+    &__repair {
+      display: flex;
     }
-    &__check-container{
-      display:flex;
+    &__check-container {
+      display: flex;
       flex-direction: row;
       width: 190px;
       justify-content: space-between;
@@ -241,22 +245,22 @@
         white-space: nowrap;
       }
     }
-    &__check{
-      display:flex;
+    &__check {
+      display: flex;
     }
-    &__title{
+    &__title {
       &::before {
-      content:url("./images/highlight.png");
-      position: absolute;
-      left: 310px;
-      top:25px;
+        content: url('./images/highlight.png');
+        position: absolute;
+        left: 310px;
+        top: 25px;
       }
     }
   }
 }
-@media(min-width:1437px){
-  .service{
-    &__list{
+@media (min-width: 1437px) {
+  .service {
+    &__list {
       height: 62px;
     }
   }
